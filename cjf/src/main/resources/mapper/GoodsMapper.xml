@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.neu.goods.mapper.GoodsMapper">
+    <select id="findGoods" resultType="com.neu.goods.entity.Goods" parameterType="map">
+            <![CDATA[
+        select  d.* from
+            (select g.*,rownum r
+             from goods g) d
+        where r>(#{index}-1)*#{size} and r<=#{index}*#{size}
+        ]]>
+
+    </select>
+    <!--  查询总记录数-->
+    <select id="count" resultType="int">
+        select count(1) from goods
+    </select>
+
+    <!--根据id删除记录-->
+    <delete id="deleteGoods" parameterType="com.neu.goods.entity.Goods">
+        delete from goods where gid=#{gid}
+
+    </delete>
+    <!-- 根据id修改记录-->
+    <update id="updateGoods" parameterType="com.neu.goods.entity.Goods">
+        update goods set gimage=#{gimage},gname=#{gname},gprice=#{gprice},count=#{count},createtime=#{createtime},gdesc=#{gdesc}
+        where gid=#{gid}
+    </update>
+    <!-- 根据id查询数据-->
+    <select id="findById" resultType="com.neu.goods.entity.Goods">
+        select * from goods where gid=#{gid}
+    </select>
+
+<!--  根据图片或者商品id查询商品-->
+    <select id="findByGimage" resultType="com.neu.goods.entity.Goods">
+        select * from goods where gimage=#{gimage}
+    </select>
+    <!--  模糊查询-->
+    <sql id="sql1">
+        select d.* from
+            (select g.*,rownum r
+             from goods g
+    </sql>
+    <sql id="sql2">
+        <![CDATA[
+        )d
+            where r>(#{index}-1)*#{size} and r<=#{index}*#{size}
+        ]]>
+    </sql>
+    <select id="findGoodsMo" resultType="com.neu.goods.entity.Goods">
+        <include refid="sql1"></include>
+        <where>
+            <if test="gname!=null and gname!=''">
+                and gname like '%${gname}%'
+            </if>
+        </where>
+        <include refid="sql2"></include>
+    </select>
+
+    <!-- 模糊查询总记录数-->
+    <select id="countMo" resultType="int">
+        select count(*) from goods
+        <where>
+            <if test="gname!=null and  gname!=''">
+                gname like '%${gname}%'
+            </if>
+        </where>
+    </select>
+
+<!-- 添加记录数-->
+    <insert id="addGoods" parameterType="com.neu.goods.entity.Goods">
+        insert into goods(gid,gimage,gname,gprice,count,createtime,gdesc)
+        values(seq_goods.nextval,#{gimage},#{gname},#{gprice},#{count},#{createtime},#{gdesc})
+    </insert>
+
+
+</mapper>
+

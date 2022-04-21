@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.neu.lists.mapper.ListsMapper">
+    <!-- 添加到订单-->
+    <insert id="addLists" parameterType="com.neu.lists.entity.Lists" >
+        insert into lists(lid,uname,uphone,address,totalsum)
+        values(seq_lists.nextval,#{uname},#{uphone},#{address},#{totalsum})
+    </insert>
+<!--    查询订单-->
+    <select id="findLists" resultType="com.neu.lists.entity.Lists" parameterType="map">
+            <![CDATA[
+        select  d.* from
+            (select l.*,rownum r
+             from lists l) d
+        where r>(#{index}-1)*#{size} and r<=#{index}*#{size}
+        ]]>
+
+    </select>
+    <!--  查询订单总记录数-->
+    <select id="count" resultType="int">
+        select count(1) from lists
+    </select>
+    <!--  查询购物车总记录数-->
+    <select id="count1" resultType="int">
+        select count(1) from cart
+    </select>
+
+    <!--根据id删除记录-->
+    <delete id="deleteLists" parameterType="com.neu.lists.entity.Lists">
+        delete from lists where lid=#{lid}
+
+    </delete>
+    <!-- 根据id修改记录-->
+    <update id="updateLists" parameterType="com.neu.lists.entity.Lists">
+        update lists set uname=#{uname},uphone=#{uphone},address=#{address},totalsum=#{totalsum}
+        where lid=#{lid}
+    </update>
+    <!-- 根据id查询数据-->
+    <select id="findByLid" resultType="com.neu.lists.entity.Lists">
+        select * from lists where lid=#{lid}
+    </select>
+<!--  根据用户名查询数据-->
+    <select id="findByUname1" resultType="com.neu.lists.entity.Lists">
+        select * from lists where uname=#{uname}
+    </select>
+    <!--  模糊查询-->
+    <sql id="sql1">
+        select d.* from
+            (select l.*,rownum r
+             from lists l
+    </sql>
+    <sql id="sql2">
+        <![CDATA[
+        )d
+            where r>(#{index}-1)*#{size} and r<=#{index}*#{size}
+        ]]>
+    </sql>
+    <select id="findListsMo" resultType="com.neu.lists.entity.Lists">
+        <include refid="sql1"></include>
+        <where>
+            <if test="uname!=null and uname!=''">
+                and uname like '%${uname}%'
+            </if>
+        </where>
+        <include refid="sql2"></include>
+    </select>
+
+    <!-- 模糊查询总记录数-->
+    <select id="countMo" resultType="int">
+        select count(*) from lists
+        <where>
+            <if test="uname!=null and  uname!=''">
+                uname like '%${uname}%'
+            </if>
+        </where>
+    </select>
+    <!--  根据用户名查询购物车-->
+    <select id="findByUname" resultType="com.neu.cart.entity.Cart">
+        select * from cart where uname=#{uname}
+    </select>
+<!--   查询所有购买记录-->
+    <select id="findListsAllDetails" resultType="com.neu.cart.entity.Cart" parameterType="map">
+            <![CDATA[
+        select  d.* from
+            (select c.*,rownum r
+             from cart c) d
+        where r>(#{index}-1)*#{size} and r<=#{index}*#{size}
+        ]]>
+
+    </select>
+</mapper>

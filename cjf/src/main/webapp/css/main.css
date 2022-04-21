@@ -1,0 +1,1249 @@
+/*顶部*/
+.commonHeadTop{
+	position: relative;
+    z-index: 30;
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background: #333;
+}
+.commonHeadTop .topbarNav{
+	line-height: 40px;
+}
+.commonHeadTop .topbarNav a{
+	color: #b0b0b0;
+	margin-right: 10px;
+}
+
+.topbarCart{
+	line-height: 40px;
+}
+.topbarCart a{
+	display: block;
+	color: #b0b0b0;
+	padding: 0 10px;
+}
+.topbarCart a:hover{
+	color: #ff6700;
+	background-color:#fff ;
+}
+.topbarInfo{
+	line-height: 40px;
+}
+.topbarInfo a{
+	color: #b0b0b0;
+	margin-right: 10px;
+}
+.topbarNav a:hover,.topbarInfo a:hover{
+	color:#fff;
+}
+
+/*头部*/
+.commonHead{
+	height: 100px;
+}
+.commonHead .content{
+	height: 100px;
+	position: relative;
+}
+.commonHead .content .logo{
+	position: absolute;
+	top: 25px;
+	left: 0;
+	height: 50px;
+	width: 100px;
+	line-height: 50px;
+	text-align: center;
+	background: #ff6700;
+	color:#fff;
+	font-size: 16px;
+	font-weight: 600;
+}
+.commonHead .content .logo a{
+	color: #FFFFFF;
+	display: block;
+}
+.commonHead .mainNav{
+	position: absolute;
+	top: 25px;
+	left: 180px;
+	height: 50px;
+	width: 670px;
+	line-height: 50px;
+}
+.commonHead .mainNav a{
+	margin-right: 10px;
+	color:#333;
+	font-size: 14px;
+}
+.commonHead .mainNav a:hover{
+	color: #ff6700;
+}
+.commonHead .searchBox{
+	position: absolute;
+	top: 25px;
+	height: 50px;
+	width: 296px;
+	right: 0;
+}
+.commonHead .searchBox:hover .searchInput{
+	border-color: #b0b0b0;
+}
+.commonHead .searchBox:hover .searchBtn{
+	border-color: #b0b0b0;
+}
+.commonHead .searchBox .searchInput{
+	display: block;
+	border:none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 246px;
+	height: 50px;
+	line-height: 48px;
+	box-sizing: border-box;
+	border: 1px solid #e0e0e0;
+	border-right: none;
+	padding: 0 10px;
+}
+.commonHead .searchBox .searchBtn{
+	width: 50px;
+	height: 50px;
+	line-height: 48px;
+	box-sizing: border-box;
+	border: 1px solid #e0e0e0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	text-align: center;
+}
+.commonHead .searchBox .searchBtn .iconfont{
+	font-size: 18px;
+}
+.commonHead .searchBox .searchBtn:hover{
+	border: 1px solid #ff6700 !important;
+	background: #ff6700;
+    color: #fff;
+}
+
+
+/*轮播*/
+.commonBanner .bannerBox{
+	width: 1160px;
+	height: 450px;
+	position: relative;
+}
+
+.commonBanner .bannerBox #owl-demo a{
+	display: block;
+}
+.commonBanner .bannerBox #owl-demo img{
+	display: block;
+	width: 1160px;
+	height: 450px;
+}
+.owl-controls{
+	position: absolute;
+	bottom: 20px;
+	height: 16px;
+	font-size: 0;
+	text-align: center;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.owl-controls .owl-page{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: #999;
+	margin: 0 12px;
+	border-radius: 50%;
+}
+.owl-controls .owl-page.active{
+	background: #ff6700;
+}
+
+/*主要分类*/
+.commonMainKind{
+	margin-top: 15px;
+}
+.commonMainKind .manKind{
+	height: 150px;
+	display: flex;
+	margin: 0 -8px;
+}
+.commonMainKind .manKind .item{
+	flex: 1;
+	padding: 0 8px;
+}
+.commonMainKind .manKind .item a{
+	display: block;
+	overflow: hidden;
+}
+.commonMainKind .manKind .item a img{
+	display: block;
+	width: 100%;
+	height: 150px;
+	transition: .3s;
+}
+.commonMainKind .manKind .item a img:hover{
+	transform: scale(1.2);
+}
+/*产品分类*/
+.commonProduct{
+	background: #f5f5f5;
+	/*padding: 40px 0 24px;*/
+	padding: 40px 0;
+	margin: 40px 0 0;
+}
+.productKindName{
+	height: 58px;
+	line-height: 58px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.productKindContent{
+	margin: 0 -8px;
+	font-size: 0;
+}
+.productKindContent .item{
+	display: inline-block;
+	width: 20%;
+	padding: 0 8px;
+	height: 220px;
+	box-sizing: border-box;
+	margin: 0 0 16px;
+}
+.productKindContent .item a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	transition: .3s;
+	cursor: pointer;
+	padding: 20px 0;
+	box-sizing: border-box;
+}
+.productKindContent .item a:hover{
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+	transform: translate3d(0, -2px, 0);
+}
+.productKindContent .item a img{
+	display: block;
+	width:150px;
+	height: 150px;
+	margin: 0 auto;
+}
+.productKindContent .item a .productName{
+	height: 30px;
+	line-height: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color:#333;
+	font-size: 14px;
+	text-align: center;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+/*底部*/
+.commonFooter .footerBox{
+	font-size: 14px;
+	color:#616161;
+}
+.commonFooter .footerBox a{
+	color:#616161;
+}
+.commonFooter .footerBox a:hover{
+	color: #ff6700;
+}
+
+.commonFooter .footerBox .toolLinks{
+	height: 35px;
+	line-height: 35px;
+	display: flex;
+	padding: 27px 0;
+	border-bottom: 1px solid #ccc;
+}
+.commonFooter .footerBox .toolLinks i{
+	margin-right: 5px;
+}
+.commonFooter .footerBox .toolLinks .item{
+	flex: 1;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	height: 25px;
+	line-height: 25px;
+}
+.commonFooter .footerBox .toolLinks .item:last-child{
+	border-right: #e0e0e0;
+}
+
+.commonFooter .footerBox .toolNav{
+	display: flex;
+}
+
+.commonFooter .footerBox .toolNav .item{
+	flex: 1;
+	margin: 27px 0;
+	line-height: 25px;
+}
+
+.commonFooter .footerBox .toolNav .item a{
+	display: block;
+}
+
+.commonFooter .footerBox .toolNav .item span{
+	display: block;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.commonFooter .footerBox .toolNav .item.toBigInfo{
+	box-sizing: border-box;
+	border-left: 1px solid #ccc;
+}
+.commonFooter .footerBox .toolNav .infoLine{
+	padding: 0 15px;
+}
+.commonFooter .footerBox .toolNav .infoLine .onlineService{
+	display: inline-block;
+	padding: 0 8px;
+	border:1px solid #FF6700;
+	color:#FF6700;
+	cursor: pointer;
+}
+.commonFooter .footerBox .toolNav .infoLine .onlineService i{
+	margin-right: 8px;
+}
+
+.commonFooter .footerBox .toolNav .infoLine .onlineService:hover{
+	color:#fff;
+	background: #FF6700;
+}
+
+.commonFooter .footerBox .copyRight{
+	padding:30px 0;
+}
+.commonFooter .footerBox .copyRightCon{
+	height: 50px;
+	position: relative;
+}
+.commonFooter .footerBox .copyRightCon .logo{
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #FF6700;
+	color: #FFFFFF;
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+}
+.commonFooter .footerBox .copyRightCon .logo a{
+	display: block;
+	color: #fff;
+}
+
+.commonFooter .footerBox .copyNav{
+	position: absolute;
+	left: 120px;
+	top: 0;
+	height: 50px;
+	width: 700px;
+	font-size: 12px;
+}
+.commonFooter .footerBox .copyNav .copyNavline{
+	height: 25px;
+	line-height: 25px;
+}
+.commonFooter .footerBox .copyNav .copyNavline a{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.commonFooter .footerBox .hardWord{
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+}
+
+
+
+
+/*首页广告*/
+.indexAd{
+	margin: 30px 0;
+}
+.indexAd a{
+	display: block;
+}
+.indexAd a img{
+	display: block;
+	width: 100%;
+}
+
+
+/*登录页面*/
+.loginBanner .loginBox{
+	height: 500px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+}
+.loginBanner .loginBox .contentImg{
+	width: 100%;
+	height: 500px;
+}
+.loginBanner .loginBox .contentImg a{
+	display: block;
+	height: 500px;
+}
+.loginBanner .loginBox .contentImg a img{
+	display: block;
+	width: 100%;
+	height: 500px;
+}
+
+.loginBanner .loginBox .loginContent{
+	height: 350px;
+	width: 280px;
+	/*background: rgba(0,0,0,0.5);*/
+	background: #fff;
+	position: absolute;
+	top: 75px;
+	right: 40px;
+	/*color:#fff;*/
+	color: #333;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.loginBanner .loginBox .loginContent .titile{
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.loginBanner .loginBox .loginContent .line{
+	height: 40px;
+	margin-top: 15px;
+}
+.loginBanner .loginBox .loginContent .line input{
+	display: block;
+	width: 100%;
+	height: 40px;
+	border:1px solid #ccc;
+	box-sizing: border-box;
+	line-height: 38px;
+	padding: 0 8px;
+}
+.loginBanner .loginBox .loginContent .line .loginBtn{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: #FF6700;
+	color:#fff;
+	text-align: center;	
+	font-size: 16px;
+	cursor: pointer;
+}
+.loginBanner .loginBox .loginContent .line .registerBtn{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: #FF6700;
+	color:#fff;
+	text-align: center;	
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.loginBanner .loginBox .loginContent .line.bottomLine{
+	line-height: 40px;
+}
+.loginBanner .loginBox .loginContent .line.bottomLine a{
+	color:#333;
+	font-size: 14px;
+}
+
+
+/*注册页面*/
+.registerBanner .registerBox{
+	height: 500px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+}
+.registerBanner .registerBox .contentImg{
+	width: 100%;
+	height: 500px;
+}
+.registerBanner .registerBox .contentImg a{
+	display: block;
+	height: 500px;
+}
+.registerBanner .registerBox .contentImg a img{
+	display: block;
+	width: 100%;
+	height: 500px;
+}
+
+.registerBanner .registerBox .registerContent{
+	height: 350px;
+	width: 280px;
+	/*background: rgba(0,0,0,0.5);*/
+	background: #fff;
+	position: absolute;
+	top: 75px;
+	right: 40px;
+	/*color:#fff;*/
+	color: #333;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.registerBanner .registerBox .registerContent .titile{
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.registerBanner .registerBox .registerContent .line{
+	height: 40px;
+	margin-top: 10px;
+}
+.registerBanner .registerBox .registerContent .line input{
+	display: block;
+	width: 100%;
+	height: 40px;
+	border:1px solid #ccc;
+	box-sizing: border-box;
+	line-height: 38px;
+	padding: 0 8px;
+}
+.registerBanner .registerBox .registerContent .line .registerBtn{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: #FF6700;
+	color:#fff;
+	text-align: center;	
+	font-size: 16px;
+	cursor: pointer;
+}
+.registerBanner .registerBox .registerContent .line .registerBtn{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: #FF6700;
+	color:#fff;
+	text-align: center;	
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.registerBanner .registerBox .registerContent .line.bottomLine{
+	line-height: 40px;
+}
+.registerBanner .registerBox .registerContent .line.bottomLine a{
+	color:#333;
+	font-size: 14px;
+}
+
+
+/*购物车*/
+/*空车*/
+.shopCartBox {
+	background: #f5f5f5;
+	padding: 20px 0;
+}
+.shopCartBox .shopCartContent{
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+}
+.shopCartBox .shopCartContent .noThings{
+	margin: 150px auto;
+	text-align: center;
+	color:#b0b0b0;
+}
+.shopCartBox .shopCartContent .noThings .toIndex{
+	width: 180px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color:#fff;
+	display: inline-block;
+	margin-top: 30px;
+	background-color: #f5f5f5;
+	border: 1px solid #FF6700;
+    color: #ff6700;
+}
+.shopCartBox .shopCartContent .noThings .toLogin{
+	width: 180px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #FF6700;
+	color:#fff;
+	display: inline-block;
+	margin-top: 30px;
+}
+.shopCartBox .shopCartContent .shopCartItem .line{
+	display: flex;
+	border-bottom: 1px solid #dad3d3;
+}
+.shopCartBox .shopCartContent .shopCartItem .line.title{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #999;
+}
+
+.shopCartBox .shopCartContent .shopCartItem .line .item{
+	flex: 1;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+.shopCartBox .shopCartContent .shopCartItem .line.title .item{
+	height: 50px;
+	line-height: 50px;
+}
+.shopCartBox .shopCartContent .shopCartItem .line .item2{
+	flex: 2;
+}
+
+.shopCartBox .shopCartContent .shopCartItem .line .itemProductItem{
+	margin: 10px auto;
+	width: 85px;
+	height: 85px;
+}
+.shopCartBox .shopCartContent .shopCartItem .line .itemProductItem img{
+	display: block;
+	width: 80px;
+	height: 80px;
+	border: none;
+}
+.shopCartBox .shopCartContent .shopCartItem .line .deleteItem{
+	cursor: pointer;
+}
+.shopCartBox .shopCartContent .shopCartItem .line .deleteItem:hover{
+	color:#FF6700;
+}
+
+.shopCartBox .shopCartContent .shopCartItem .totalLine{
+	height: 50px;
+	width: 100%;
+	
+}
+.shopCartItem .totalLine .toIndex{
+	margin-left: 30px;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color:#333;
+	font-size: 14px;
+	margin-right: 20px;
+}
+.shopCartItem .totalLine .totalNumber{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+.shopCartItem .totalLine .toPayBtn{
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 14px;
+	background: #FF6700;
+	color:#fff;
+	cursor: pointer;
+}
+
+
+/*商品列表*/
+.productList{
+	background: #f5f5f5;
+	padding: 20px 0;
+}
+
+.productList .productListContent .title{
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.productList .productListContent .hotKind .hotItem{
+	height: 400px;
+	width: 100%;
+	position: relative;
+	padding-right:300px ;
+	box-sizing: border-box;
+	background: #fff;
+	transition: .3s;
+	margin-bottom: 20px;
+}
+.productList .productListContent .hotKind .hotItem:hover{
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translate3d(0, -5px, 0);
+    z-index: 3;
+}
+.productList .productListContent .hotKind .hotItem .hotImgA{
+	display: block;
+	width: 860px;
+	height: 400px;
+}
+.productList .productListContent .hotKind .hotItem .hotImgA img{
+	display: block;
+	width: 100%;
+	height: 400px;
+}
+
+.productList .productListContent .hotKind .hotItem .hotInfo{
+	position: absolute;
+	top: 20px;
+	right: 0;
+	width: 300px;
+	padding: 30px 40px;
+	box-sizing: border-box;
+}
+
+.productList .productListContent .hotKind .hotItem .hotInfo .productName{
+	height: 80px;
+	line-height: 80px;
+	font-size: 30px;
+	font-weight: 600;
+}
+.productList .productListContent .hotKind .hotItem .hotInfo .easyWord{
+	line-height: 30px;
+	color: rgba(51,51,51,0.7);
+}
+.productList .productListContent .hotKind .hotItem .hotInfo .productPrice span{
+	font-size: 26px;
+}
+.productList .productListContent .hotKind .hotItem .hotInfo .productPrice{
+	margin-top: 20px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color:#FF6700;
+}
+.productList .productListContent .hotKind .hotItem .hotInfo .seeProduct{
+	display: inline-block;
+	color:#333;
+	font-size: 14px;
+	margin-top:40px;
+	color: rgba(51,51,51,0.7);
+}
+.normalKind{
+	margin: 0 -8px;
+}
+
+.normalKind .line{
+	font-size: 0;
+}
+.normalKind .line .item{
+	display: inline-block;
+	width: 50%;
+	padding: 0 8px;
+	font-size: 16px;
+	box-sizing: border-box;
+	height: 480px;
+	margin: 0 0 16px 0;
+	
+}
+.normalKind .line .item .itemCon{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	transition: .3s;
+}
+.normalKind .line .item .itemCon:hover{
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translate3d(0, -5px, 0);
+    z-index: 3;
+}
+.normalKind .line .item .itemCon  .itemConImg{
+	height: 360px;
+	width: 100%;
+}
+
+.normalKind .line .item .itemCon  .itemConImg img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.itemConInfo{
+	padding: 20px;
+	box-sizing: border-box;
+}
+.itemConInfo .productName{
+	height:40px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.itemConInfo .productPrice{
+	height: 40px;
+	line-height: 40px;
+}
+.itemConInfo .productPrice .nowPrice{
+	color: #FF6700;
+	font-size: 18px;
+	font-weight: 600;
+}
+.itemConInfo .productPrice .agoPrice{
+	text-decoration:line-through;
+}
+
+
+
+
+
+
+/*产品详情*/
+.productDetailBox{
+	border-top: 1px solid #ccc;
+}
+.productDetailBox .detailBox .top{
+	width: 100%;
+	font-size: 0;
+	overflow: hidden;
+}
+.productDetailBox .detailBox .top .item{
+	display: inline-block;
+	width: 50%;
+	font-size: 14px;
+	float: left;
+	height: 350px;
+}
+.productDetailBox .productImgMAIN{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.productDetailBox .productImgMAIN img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	display: block;
+	width: 350px;
+	height: 350px;
+}
+.productDetailBox .productName{
+	height: 80px;
+	line-height: 80px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #333;
+}
+.productDetailBox .productWords{
+	height: 50px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #b0b0b0;
+}
+.productDetailBox .buyLine{
+	height: 40px;
+}
+.productDetailBox .productPrice{
+	float: left;
+	height: 40px;
+	line-height:40px;
+	font-size: 18px;
+	color: #ff9000;
+	font-weight: 600;
+}
+.productDetailBox .addShopCart{
+	height: 40px;
+	width: 120px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFF;
+	background: #ff9000;
+	float: right;
+	cursor: pointer;
+}
+.bottom .title{
+	height: 60px;
+	line-height: 60px;
+	background: #f5f5f5;
+	padding: 0 20px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.bottom .conWords{
+	padding: 20px;
+	line-height: 30px;
+	border: 1px solid #f5f5f5;
+	font-size: 14px;
+	color: #333;
+}
+
+/*订单列表*/
+/*空车*/
+.shopListBox {
+	background: #f5f5f5;
+	padding: 20px 0;
+}
+.shopListBox .shopListContent{
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+}
+.shopListBox .shopListContent .noThings{
+	margin: 150px auto;
+	text-align: center;
+	color:#b0b0b0;
+}
+.shopListBox .shopListContent .noThings .toIndex{
+	width: 180px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color:#fff;
+	display: inline-block;
+	margin-top: 30px;
+	background-color: #f5f5f5;
+	border: 1px solid #FF6700;
+    color: #ff6700;
+}
+.shopListBox .shopCartContent .noThings .toLogin{
+	width: 180px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background: #FF6700;
+	color:#fff;
+	display: inline-block;
+	margin-top: 30px;
+}
+.shopListBox .shopListContent .shopListItem .line{
+	display: flex;
+	border-bottom: 1px solid #dad3d3;
+}
+.shopListBox .shopListContent .shopListItem .line.title{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #999;
+}
+
+.shopListBox .shopListContent .shopListItem .line .item{
+	flex: 1;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+.shopListBox .shopListContent .shopListItem .line.title .item{
+	height: 50px;
+	line-height: 50px;
+}
+.shopListBox .shopListContent .shopListItem .line .item2{
+	flex: 2;
+}
+
+.shopListBox .shopListContent .shopListItem .line .itemProductItem{
+	margin: 10px auto;
+	width: 80px;
+	height: 80px;
+}
+.shopListBox .shopListContent .shopListItem .line .itemProductItem img{
+	display: block;
+	width: 80px;
+	height: 80px;
+	border: none;
+}
+.shopListBox .shopListContent .shopListItem .line .deleteItem{
+	cursor: pointer;
+}
+.shopListBox .shopListContent .shopListItem .line .deleteItem:hover{
+	color:#FF6700;
+}
+
+.shopListBox .shopListContent .shopListItem .totalLine{
+	height: 50px;
+	width: 100%;
+	
+}
+.shopListItem .totalLine .toIndex{
+	margin-left: 30px;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color:#333;
+	font-size: 14px;
+	margin-right: 20px;
+}
+.shopListItem .totalLine .totalNumber{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+.shopCartItem .totalLine .toPayBtn{
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 14px;
+	background: #FF6700;
+	color:#fff;
+	cursor: pointer;
+}
+
+/*去付款页面*/
+.toPayMoneyBox {
+	background: #f5f5f5;
+	padding: 20px 0;
+}
+.toPayMoneyBox .toPayMoneyContent{
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+}
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line{
+	display: flex;
+	border-bottom: 1px solid #dad3d3;
+}
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line.title{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #999;
+}
+
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line .item{
+	flex: 1;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line.title .item{
+	height: 50px;
+	line-height: 50px;
+}
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line .item2{
+	flex: 2;
+}
+
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line .itemProductItem{
+	margin: 10px auto;
+	width: 80px;
+	height: 80px;
+}
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line .itemProductItem img{
+	display: block;
+	width: 80px;
+	height: 80px;
+	border: none;
+}
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line .deleteItem{
+	cursor: pointer;
+}
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .line .deleteItem:hover{
+	color:#FF6700;
+}
+
+.toPayMoneyBox .toPayMoneyContent .toPayMoneyItem .totalLine{
+	height: 50px;
+	width: 100%;
+	
+}
+.toPayMoneyBox .totalLine .toIndex{
+	margin-left: 30px;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color:#333;
+	font-size: 14px;
+	margin-right: 20px;
+}
+.toPayMoneyBox .totalLine .totalNumber{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+.toPayMoneyBox .totalLine .toPayBtn{
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 14px;
+	background: #FF6700;
+	color:#fff;
+	cursor: pointer;
+}
+
+
+
+.toPayMoneyBox .bottomPrice{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.toPayMoneyBox .bottomPrice .totalPrice{
+	color: #ff9000;
+	font-weight: 600;
+}
+
+.toChoosePayMethod .title{
+	height: 60px;
+	line-height: 60px;
+	padding: 0 20px;
+	font-weight: 600;
+	color: #ff9000;
+	font-size: 16px;
+}
+.payBox{
+	font-size: 0;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.payBox .payItem{
+	display: inline-block;
+	width: 10%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	margin: 5px 0;
+	font-size: 14px;
+	box-sizing: border-box;
+	position: relative;
+	padding-left: 30px;
+}
+.payBox .payItem input{
+	position: absolute;
+	margin: 0;
+	width: 16px;
+	height: 16px;
+	top: 7px;
+	left: 7px;
+}
+.payBox .payItem span{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+
+.getProductInfo{
+	padding: 0 20px;
+}
+
+.getProductInfo .line{
+	height:36px;
+	line-height: 36px;
+	padding-left: 120px;
+	position: relative;
+	margin-bottom: 15px;
+}
+.getProductInfo .line .infoFlag{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.getProductInfo .line input{
+	display: block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	height: 36px;
+	width: 300px;
+	padding: 0 5px;
+}
+.toPayLine{
+	height: 40px;
+	text-align: right;
+	margin: 10px 0;
+	padding: 0 20px;
+}
+
+.toPayLine .toPayBtn{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #FF9000;
+	color:#fff;
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*分页*/
+.pageBox{
+	font-size: 0;
+	padding: 10px 0;
+	text-align: center;
+	padding: 10px 0;
+	margin-left: 10px;
+	margin-right: 178px;
+
+}
+.pageBox a{
+	display: inline-block;
+	height: 30px;
+	width: 40px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	margin: 0 6px;
+	border: 1px solid #ccc;
+	color:#ccc;
+	background: #fff;
+	border-radius: 5px;
+}
+.pageBox span{
+	display: inline-block;
+	height: 30px;
+	width: 40px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	margin: 0 6px;
+	border: 1px solid #ccc;
+	color:#ccc;
+	background: #fff;
+	border-radius: 5px;
+}
+.pageBox a:hover{
+	background: #FF6700;
+	color:#fff;
+	border: 1px solid #FF6700;
+}
+.pageBox .acti{
+	background: #FF6700;
+	color:#fff;
+	border: 1px solid #FF6700;
+}
+
+
+

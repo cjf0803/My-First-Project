@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.neu.cart.mapper.CartMapper">
+    <!-- 添加到购物车-->
+    <insert id="addCart" parameterType="com.neu.cart.entity.Cart" >
+        insert into cart(uname,gid,gimage,gname,gprice,sum,gnum)
+        values(#{uname},#{gid},#{gimage},#{gname},#{gprice},#{sum},#{gnum})
+    </insert>
+<!--    查询购物车记录-->
+    <sql id="sql1">
+        select  d.* from
+            (select c.*,rownum r
+             from cart c
+    </sql>
+    <sql id="sql2">
+        <![CDATA[
+           )d
+           where r>(#{index}-1)*#{size} and r<=#{index}*#{size}
+        ]]>
+    </sql>
+    <select id="findCart" resultType="com.neu.cart.entity.Cart">
+        <include refid="sql1"></include>
+        <where>
+                 and uname=#{uname}
+         </where>
+        <include refid="sql2"></include>
+    </select>
+    <!--  查询总记录数-->
+    <select id="count" resultType="int">
+        select count(*) from cart where uname=#{uname}
+    </select>
+
+    <!--根据id删除记录-->
+    <delete id="deleteCart" parameterType="com.neu.cart.entity.Cart">
+        delete from cart where gid=#{gid}
+
+    </delete>
+<!-- 如果同一个用户重复添加同一个商品那么修改cart表中gnum字段(即修改gum+1)-->
+    <update id="updateCart" parameterType="com.neu.cart.entity.Cart">
+        update cart set gnum=#{gnum},sum=#{sum}
+        where uname=#{uname} and gid=#{gid}
+    </update>
+<!--根据uname 和gid 查找记录-->
+    <select id="findByUname_Gid" resultType="com.neu.cart.entity.Cart">
+        select * from cart where uname=#{uname} and gid=#{gid}
+    </select>
+    <!--计算订单总价-->
+    <select id="totalSum" resultType="double">
+        select sum(sum) from cart where uname=#{uname}
+    </select>
+</mapper>
